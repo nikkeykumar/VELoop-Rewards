@@ -1,5 +1,4 @@
-import React from "react";
-import GiveawayStats from "../../components/GiveawayStats/GiveawayStats";
+
 import HowToParticipate from "../../components/HowToParticipate/HowToParticipate";
 import WinnerSlider from "../../components/WinnerSlider/WinnerSlider";
 import WinnersTabs from "../../components/WinnersTabs/WinnersTabs";
