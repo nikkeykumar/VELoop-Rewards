@@ -1,14 +1,12 @@
 import GiveawayHero from "../../components/giveawayHero/GiveawayHero";
 import FeaturedGiveaways from "../../components/featuredGiveaways/FeaturedGiveaways";
-import FAQ from "../../components/FAQ/FAQ.jsx";
-
+import FAQ from "../../components/faq/FAQ.jsx";
 import styles from "./GiveawayPage.module.css";
-
 import { currentGiveaway } from "../../data/giveawayData";
-import HowToParticipate from "../../components/HowToParticipate/HowToParticipate.jsx";
+import HowToParticipate from "../../components/howToParticipate/HowToParticipate.jsx";
 import WinnerSlider from "../../components/winnerSlider/WinnerSlider.jsx";
 import WinnersTabs from "../../components/winnersTabs/WinnersTabs.jsx";
-import TrustSection from "../../components/TrustSection/TrustSection.jsx";
+import TrustSection from "../../components/trustSection/TrustSection.jsx";
 import GiveawayRules from "../../components/giveawayRules/GiveawayRules.jsx";
 
 const Giveaway = () => {
