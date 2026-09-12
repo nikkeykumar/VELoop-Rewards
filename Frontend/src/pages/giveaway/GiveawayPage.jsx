@@ -1,10 +1,10 @@
 
-import HowToParticipate from "../../components/HowToParticipate/HowToParticipate";
-import WinnerSlider from "../../components/WinnerSlider/WinnerSlider";
-import WinnersTabs from "../../components/WinnersTabs/WinnersTabs";
-import TrustSection from "../../components/TrustSection/TrustSection";
-import GiveawayRules from "../../components/GiveawayRules/GiveawayRules";
-import FAQ from "../../components/FAQ/FAQ";
+import HowToParticipate from "../../components/HowToParticipate/HowToParticipate.jsx";
+import WinnerSlider from "../../components/WinnerSlider/WinnerSlider.jsx";
+import WinnersTabs from "../../components/WinnersTabs/WinnersTabs.jsx";
+import TrustSection from "../../components/TrustSection/TrustSection.jsx";
+import GiveawayRules from "../../components/GiveawayRules/GiveawayRules.jsx";
+import FAQ from "../../components/FAQ/FAQ.jsx";
 
 import styles from "./GiveawayPage.module.css";
 import FeaturedGiveaways from "../../components/featuredGiveaways/FeaturedGiveaways";
