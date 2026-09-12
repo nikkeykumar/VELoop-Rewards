@@ -1,4 +1,9 @@
 // src/data/giveawayData.js
+import iphoneimg from "../assets/ChatGPT Image Aug 19, 2026, 01_49_05 PM.png";
+import applewatchimg from "../assets/ChatGPT Image Aug 19, 2026, 01_55_25 PM.png";
+import airpodsimg from "../assets/ChatGPT Image Aug 19, 2026, 02_06_07 PM.png";
+import amazon2000img from "../assets/ChatGPT Image Aug 19, 2026, 03_22_24 PM.png";
+import amazon500img from "../assets/ChatGPT Image Aug 19, 2026, 03_27_44 PM.png";
 
 export const currentUser = {
   id: "VE10025",
@@ -41,7 +46,7 @@ export const currentGiveaway = {
       position: "1st Prize",
       name: "iPhone 15 Pro",
       description: "Premium smartphone with powerful performance.",
-      image: "/src/assets/ChatGPT Image Aug 19, 2026, 01_49_05 PM.png",
+      image: iphoneimg,
 
       type: "PHYSICAL",
       claimType: "ADDRESS",
@@ -63,7 +68,7 @@ export const currentGiveaway = {
       position: "2nd Prize",
       name: "Apple Watch Series 9",
       description: "Smart fitness and lifestyle companion.",
-      image: "/src/assets/ChatGPT Image Aug 19, 2026, 01_55_25 PM.png",
+      image: applewatchimg,
 
       type: "PHYSICAL",
       claimType: "ADDRESS",
@@ -85,7 +90,7 @@ export const currentGiveaway = {
       position: "3rd Prize",
       name: "AirPods Pro",
       description: "Premium wireless audio experience.",
-      image: "/src/assets/ChatGPT Image Aug 19, 2026, 02_06_07 PM.png",
+      image: airpodsimg,
 
       type: "PHYSICAL",
       claimType: "ADDRESS",
@@ -107,7 +112,7 @@ export const currentGiveaway = {
       position: "Lucky Draw",
       name: "₹2,000 Amazon Gift Card",
       description: "Enjoy shopping with a digital Amazon voucher.",
-      image: "/src/assets/ChatGPT Image Aug 19, 2026, 03_22_24 PM.png",
+      image: amazon2000img,
 
       type: "GIFT_CARD",
       claimType: "EMAIL",
@@ -129,7 +134,7 @@ export const currentGiveaway = {
       position: "Lucky Draw",
       name: "₹500 Amazon Gift Card",
       description: "A digital shopping reward for your next purchase.",
-      image: "/src/assets/ChatGPT Image Aug 19, 2026, 03_27_44 PM.png",
+      image: amazon500img,
 
       type: "GIFT_CARD",
       claimType: "EMAIL",
