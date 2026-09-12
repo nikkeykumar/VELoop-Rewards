@@ -1,27 +1,24 @@
 import GiveawayHero from "../../components/giveawayHero/GiveawayHero";
 import FeaturedGiveaways from "../../components/featuredGiveaways/FeaturedGiveaways";
-import HowToParticipate from "../../components/HowToParticipate/HowToParticipate.jsx";
-import WinnerSlider from "../../components/WinnerSlider/WinnerSlider.jsx";
-import WinnersTabs from "../../components/WinnersTabs/WinnersTabs.jsx";
-import TrustSection from "../../components/TrustSection/TrustSection.jsx";
-import GiveawayRules from "../../components/GiveawayRules/GiveawayRules.jsx";
 import FAQ from "../../components/FAQ/FAQ.jsx";
 
 import styles from "./GiveawayPage.module.css";
 
 import { currentGiveaway } from "../../data/giveawayData";
+import HowToParticipate from "../../components/HowToParticipate/HowToParticipate.jsx";
+import WinnerSlider from "../../components/winnerSlider/WinnerSlider.jsx";
+import WinnersTabs from "../../components/winnersTabs/WinnersTabs.jsx";
+import TrustSection from "../../components/TrustSection/TrustSection.jsx";
+import GiveawayRules from "../../components/giveawayRules/GiveawayRules.jsx";
 
 const Giveaway = () => {
   return (
     <main className={styles.page}>
       <GiveawayHero />
-
       <FeaturedGiveaways prizes={currentGiveaway.prizes} />
-
       <HowToParticipate />
 
       <WinnerSlider />
-
       <WinnersTabs />
 
       <TrustSection />
