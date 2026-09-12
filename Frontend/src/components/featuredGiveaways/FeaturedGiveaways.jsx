@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { currentGiveaway } from "../../data/giveawayData";
-import PrizeCard from "../PrizeCard/PrizeCard";
+import PrizeCard from "../prizeCard/PrizeCard";
 import styles from "./FeaturedGiveaways.module.css";
 
 const FeaturedGiveaways = ({ prizes = [] }) => {

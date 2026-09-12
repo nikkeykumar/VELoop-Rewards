@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./GiveawayHero.module.css";
 import { currentGiveaway } from "../../data/giveawayData";
 import giftImage from "../../assets/ChatGPT Image Aug 19, 2026, 01_40_53 PM (1).png";
-import GiveawayStats from "../GiveawayStats/GiveawayStats";
+import GiveawayStats from "../giveawayStats/GiveawayStats";
 
 const GiveawayHero = () => {
   const navigate = useNavigate();
