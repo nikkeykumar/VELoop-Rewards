@@ -1,0 +1,30 @@
+/* GLOBAL RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  background: #08080f !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #08080f;
+  color: #fff;
+  overflow-x: hidden;
+}

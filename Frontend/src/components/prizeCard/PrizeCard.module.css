@@ -1,0 +1,459 @@
+/* ================================
+   PRIZE CARD
+================================ */
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(113, 46, 255, 0.14),
+      transparent 42%
+    ),
+    linear-gradient(180deg, rgba(20, 18, 35, 0.96), rgba(9, 10, 18, 0.98));
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(151, 86, 255, 0.55);
+
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.48),
+    0 0 28px rgba(126, 58, 255, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ================================
+   IMAGE AREA
+================================ */
+
+.imageArea {
+  position: relative;
+
+  height: 190px;
+  min-height: 190px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+
+  background:
+    radial-gradient(
+      circle at 50% 52%,
+      rgba(120, 47, 255, 0.23),
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(61, 87, 255, 0.09),
+      transparent 45%
+    ),
+    #0b0b16;
+}
+
+/* soft glow behind product */
+
+.imageArea::before {
+  content: "";
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background: rgba(126, 55, 255, 0.15);
+
+  filter: blur(38px);
+
+  pointer-events: none;
+}
+
+/* product image */
+
+.imageArea img {
+  position: relative;
+  z-index: 2;
+
+  width: 78%;
+  height: 78%;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 0 15px rgba(128, 61, 255, 0.18));
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.card:hover .imageArea img {
+  transform: scale(1.06);
+
+  filter: drop-shadow(0 16px 25px rgba(0, 0, 0, 0.58))
+    drop-shadow(0 0 22px rgba(137, 67, 255, 0.28));
+}
+
+/* ================================
+   POSITION BADGE
+================================ */
+
+.position {
+  position: absolute;
+
+  top: 12px;
+  left: 12px;
+
+  z-index: 5;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 10px;
+
+  border-radius: 7px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.01em;
+
+  background: linear-gradient(135deg, #9b5cff, #7028e8);
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  box-shadow: 0 5px 14px rgba(104, 42, 220, 0.32);
+}
+
+/* ================================
+   TYPE BADGE
+================================ */
+
+.typeBadge {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  z-index: 5;
+
+  padding: 5px 8px;
+
+  border-radius: 6px;
+
+  color: #aaa7b8;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.07em;
+
+  background: rgba(7, 7, 14, 0.72);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(8px);
+}
+
+/* ================================
+   CONTENT
+================================ */
+
+.content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 17px 16px 15px;
+}
+
+/* small label */
+
+.prizeLabel {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #9c6cff;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+/* title */
+
+.content h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 17px;
+  line-height: 1.25;
+
+  font-weight: 750;
+
+  letter-spacing: -0.025em;
+}
+
+/* description */
+
+.content p {
+  margin: 5px 0 13px;
+
+  color: #858391;
+
+  font-size: 10px;
+  line-height: 1.45;
+
+  min-height: 29px;
+}
+
+/* ================================
+   META
+================================ */
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 8px;
+
+  padding-bottom: 13px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.meta > div {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 5px;
+
+  color: #858391;
+
+  font-size: 9px;
+}
+
+.meta svg {
+  flex-shrink: 0;
+}
+
+.meta > div:first-child svg {
+  color: #a45cff;
+}
+
+.meta .time svg {
+  color: #a45cff;
+}
+
+.meta span {
+  white-space: nowrap;
+}
+
+/* countdown */
+
+.time span {
+  color: #b9b3c6;
+}
+
+.ended {
+  color: #ff7070 !important;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* ================================
+   BOTTOM
+================================ */
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding-top: 13px;
+}
+
+/* entry fee */
+
+.entry {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  min-width: 0;
+}
+
+.entry span {
+  color: #777483;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.entry strong {
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  white-space: nowrap;
+}
+
+/* ================================
+   JOIN BUTTON
+================================ */
+
+.joinButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  min-width: 112px;
+
+  padding: 10px 13px;
+
+  border: 0;
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  background: linear-gradient(135deg, #9a42ff 0%, #7b25e9 55%, #6416cf 100%);
+
+  box-shadow:
+    0 7px 18px rgba(113, 38, 224, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.joinButton:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+
+  box-shadow:
+    0 10px 24px rgba(121, 40, 235, 0.4),
+    0 0 18px rgba(143, 61, 255, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.joinButton:active {
+  transform: translateY(0);
+}
+
+.joinButton:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+.joinButton:disabled:hover {
+  transform: none;
+  filter: none;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+  .imageArea {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-height: 380px;
+  }
+
+  .imageArea {
+    height: 185px;
+    min-height: 185px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    border-radius: 16px;
+  }
+
+  .imageArea {
+    height: 180px;
+    min-height: 180px;
+  }
+
+  .content h3 {
+    font-size: 16px;
+  }
+
+  .bottom {
+    gap: 7px;
+  }
+
+  .joinButton {
+    min-width: 105px;
+    padding: 9px 11px;
+  }
+}

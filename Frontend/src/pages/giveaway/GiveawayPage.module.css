@@ -1,0 +1,396 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  color: #ffffff;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(126, 34, 206, 0.18),
+      transparent 42%
+    ),
+    radial-gradient(circle at 15% 30%, rgba(37, 99, 235, 0.1), transparent 30%),
+    radial-gradient(
+      circle at 85% 35%,
+      rgba(249, 115, 22, 0.08),
+      transparent 30%
+    ),
+    #05050d;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+  width: 100%;
+  padding: 90px 24px;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+.ctaContent {
+  width: 100%;
+  max-width: 1180px;
+  min-height: 350px;
+
+  padding: 70px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 26px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(30, 18, 52, 0.92),
+    rgba(7, 8, 18, 0.97)
+  );
+
+  box-shadow:
+    0 25px 75px rgba(0, 0, 0, 0.45),
+    0 0 50px rgba(126, 34, 206, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Top neon line */
+
+.ctaContent::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 280px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #a855f7,
+    #c084fc,
+    #a855f7,
+    transparent
+  );
+
+  box-shadow:
+    0 0 12px rgba(168, 85, 247, 0.7),
+    0 0 30px rgba(168, 85, 247, 0.3);
+}
+
+/* Center glow */
+
+.ctaContent::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(126, 34, 206, 0.13) 0%,
+    rgba(126, 34, 206, 0.05) 35%,
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+/* Small decorative glow */
+
+.ctaContent {
+  isolation: isolate;
+}
+
+.ctaContent > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= LABEL ================= */
+
+.ctaLabel {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 15px;
+
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  border-radius: 999px;
+
+  background: rgba(126, 34, 206, 0.1);
+
+  color: #c084fc;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  box-shadow:
+    0 0 20px rgba(168, 85, 247, 0.08),
+    inset 0 0 15px rgba(168, 85, 247, 0.05);
+}
+
+.ctaLabel::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+
+  box-shadow:
+    0 0 6px #a855f7,
+    0 0 14px rgba(168, 85, 247, 0.8);
+
+  animation: ctaPulse 2s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* ================= HEADING ================= */
+
+.ctaContent h2 {
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+
+  margin: 18px 0 13px;
+
+  color: #ffffff;
+
+  font-size: clamp(34px, 4.5vw, 54px);
+  line-height: 1.05;
+
+  font-weight: 800;
+  letter-spacing: -0.045em;
+
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.1);
+}
+
+.ctaContent h2 span {
+  background: linear-gradient(90deg, #9333ea, #c084fc, #a855f7, #7c3aed);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: none;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.ctaContent p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 570px;
+
+  margin: 0 auto 30px;
+
+  color: #9ca3af;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ================= BUTTON ================= */
+
+.ctaButton {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 175px;
+
+  padding: 13px 21px;
+
+  border: 1px solid rgba(192, 132, 252, 0.5);
+  border-radius: 11px;
+
+  background: linear-gradient(135deg, #7e22ce, #9333ea, #7c3aed);
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px rgba(126, 34, 206, 0.25),
+    0 0 25px rgba(168, 85, 247, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.ctaButton span {
+  margin-left: 8px;
+
+  transition: transform 0.25s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+
+  filter: brightness(1.08);
+
+  box-shadow:
+    0 12px 35px rgba(126, 34, 206, 0.35),
+    0 0 35px rgba(168, 85, 247, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.ctaButton:hover span {
+  transform: translateX(5px);
+}
+
+.ctaButton:active {
+  transform: translateY(-1px);
+}
+
+/* ================= OPTIONAL PARTICLES ================= */
+
+.ctaContent .particle {
+  position: absolute;
+  z-index: 1;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #c084fc;
+
+  box-shadow:
+    0 0 8px #a855f7,
+    0 0 16px rgba(168, 85, 247, 0.6);
+
+  pointer-events: none;
+}
+
+.ctaContent .particle:nth-child(1) {
+  top: 22%;
+  left: 12%;
+}
+
+.ctaContent .particle:nth-child(2) {
+  top: 30%;
+  right: 14%;
+}
+
+.ctaContent .particle:nth-child(3) {
+  bottom: 22%;
+  left: 18%;
+}
+
+.ctaContent .particle:nth-child(4) {
+  bottom: 28%;
+  right: 17%;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 65px 16px;
+  }
+
+  .ctaContent {
+    min-height: 320px;
+    padding: 55px 25px;
+    border-radius: 22px;
+  }
+
+  .ctaContent h2 {
+    font-size: 36px;
+  }
+
+  .ctaContent p {
+    font-size: 13px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 50px 12px;
+  }
+
+  .ctaContent {
+    min-height: 300px;
+    padding: 45px 18px;
+    border-radius: 19px;
+  }
+
+  .ctaLabel {
+    font-size: 9px;
+  }
+
+  .ctaContent h2 {
+    font-size: 30px;
+    letter-spacing: -0.035em;
+  }
+
+  .ctaContent p {
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .ctaButton {
+    min-width: 155px;
+    padding: 12px 17px;
+    font-size: 12px;
+  }
+}

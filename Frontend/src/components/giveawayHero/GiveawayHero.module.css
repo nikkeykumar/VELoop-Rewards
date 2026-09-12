@@ -1,0 +1,726 @@
+.hero {
+  position: relative;
+  min-height: 300px;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+
+  background:
+    radial-gradient(circle at 50% 45%, rgba(115, 65, 255, 0.16), transparent 42%),
+    radial-gradient(circle at 15% 30%, rgba(70, 90, 255, 0.10), transparent 30%),
+    radial-gradient(circle at 85% 35%, rgba(255, 120, 40, 0.08), transparent 30%),
+    #080914;
+}
+
+/* =========================
+   Background Effects
+========================= */
+
+.bgGlowOne {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -180px;
+  left: 10%;
+  border-radius: 50%;
+  background: rgba(92, 61, 255, 0.12);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: -2;
+}
+
+.bgGlowTwo {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  right: 5%;
+  top: 80px;
+  border-radius: 50%;
+  background: rgba(255, 98, 35, 0.1);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: -2;
+}
+
+.bgGlowThree {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  bottom: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(116, 50, 255, 0.15);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: -2;
+}
+
+.gridBg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: -1;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+
+  background-size: 55px 55px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+}
+
+/* =========================
+   Main Container
+========================= */
+
+.heroInner {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  max-width: 1250px;
+  min-height: 300px;
+  margin: 0 auto;
+
+  padding: 30px 40px 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Top Label
+========================= */
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 7px 14px;
+
+  border: 1px solid rgba(166, 118, 255, 0.35);
+  border-radius: 999px;
+
+  background: rgba(93, 55, 185, 0.12);
+
+  color: #c8aaff;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+
+  box-shadow:
+    0 0 20px rgba(121, 76, 255, 0.12),
+    inset 0 0 15px rgba(121, 76, 255, 0.05);
+}
+
+.labelIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #a778ff;
+}
+
+/* =========================
+   Main Content
+========================= */
+
+.content {
+  width: 100%;
+  max-width: 850px;
+  margin: 22px auto 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content h1 {
+  margin: 0;
+
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -2.5px;
+
+  color: #ffffff;
+
+  text-shadow: 0 0 30px rgba(122, 75, 255, 0.16);
+}
+
+.content h1 span {
+  display: inline-block;
+
+  background: linear-gradient(90deg, #9a6cff, #c36cff, #ff8b3d);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content p {
+  max-width: 650px;
+
+  margin: 14px auto 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.desktopBreak {
+  display: block;
+}
+
+.subText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 10px;
+
+  color: #b993ff;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 46px;
+
+  padding: 0 22px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid rgba(167, 113, 255, 0.5);
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #7044ff, #9b55ff);
+
+  box-shadow: 0 8px 30px rgba(106, 62, 255, 0.28);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 35px rgba(106, 62, 255, 0.42);
+}
+
+.secondaryButton {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  color: rgba(255, 255, 255, 0.82);
+
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.secondaryButton:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(167, 113, 255, 0.4);
+
+  background: rgba(167, 113, 255, 0.08);
+}
+
+/* =========================
+   Gift Decorations
+========================= */
+
+.giftDecoration {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+  z-index: 2;
+}
+
+.leftGift {
+  left: 70px;
+  top: 75px;
+
+  transform: rotate(-8deg);
+}
+
+.rightGift {
+  right: 70px;
+  top: 75px;
+
+  transform: rotate(8deg);
+}
+
+.giftImage {
+  position: relative;
+
+  width: 180px;
+  height: 180px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 18px rgba(140, 90, 255, 0.45))
+    drop-shadow(0 12px 25px rgba(0, 0, 0, 0.35));
+
+  animation: giftFloat 4s ease-in-out infinite;
+}
+
+.rightGift .giftImage {
+  transform: scaleX(-1);
+  animation-delay: 1.2s;
+}
+
+.giftGlow {
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+
+  background: rgba(130, 75, 255, 0.18);
+
+  filter: blur(45px);
+}
+
+@keyframes giftFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.rightGift .giftImage {
+  animation-name: giftFloatRight;
+}
+
+@keyframes giftFloatRight {
+  0%,
+  100% {
+    transform: scaleX(-1) translateY(0);
+  }
+
+  50% {
+    transform: scaleX(-1) translateY(-10px);
+  }
+}
+
+/* =========================
+   Confetti
+========================= */
+
+.confetti {
+  position: absolute;
+
+  z-index: 3;
+
+  font-size: 18px;
+  line-height: 1;
+
+  pointer-events: none;
+
+  opacity: 0.7;
+
+  animation: confettiFloat 4s ease-in-out infinite;
+}
+
+.c1 {
+  top: 14%;
+  left: 9%;
+  color: #9a6cff;
+  animation-delay: 0s;
+}
+
+.c2 {
+  top: 20%;
+  left: 18%;
+  color: #ff9d54;
+  animation-delay: 0.7s;
+}
+
+.c3 {
+  top: 34%;
+  left: 5%;
+  color: #b36cff;
+  animation-delay: 1.2s;
+}
+
+.c4 {
+  top: 48%;
+  left: 15%;
+  color: #ff8b4d;
+  animation-delay: 1.8s;
+}
+
+.c5 {
+  top: 68%;
+  left: 8%;
+  color: #8d72ff;
+  animation-delay: 0.5s;
+}
+
+.c6 {
+  top: 80%;
+  left: 20%;
+  color: #ff9d54;
+  animation-delay: 1.5s;
+}
+
+.c7 {
+  top: 12%;
+  right: 10%;
+  color: #b16cff;
+  animation-delay: 0.3s;
+}
+
+.c8 {
+  top: 23%;
+  right: 20%;
+  color: #ff9750;
+  animation-delay: 1s;
+}
+
+.c9 {
+  top: 36%;
+  right: 6%;
+  color: #9b6cff;
+  animation-delay: 1.7s;
+}
+
+.c10 {
+  top: 49%;
+  right: 15%;
+  color: #ff8c4c;
+  animation-delay: 0.8s;
+}
+
+.c11 {
+  top: 65%;
+  right: 8%;
+  color: #a66cff;
+  animation-delay: 1.4s;
+}
+
+.c12 {
+  top: 79%;
+  right: 21%;
+  color: #ff9c55;
+  animation-delay: 2s;
+}
+
+.c13 {
+  top: 10%;
+  left: 32%;
+  color: #8f72ff;
+  font-size: 13px;
+  animation-delay: 0.9s;
+}
+
+.c14 {
+  top: 16%;
+  right: 33%;
+  color: #ff9550;
+  font-size: 13px;
+  animation-delay: 1.6s;
+}
+
+@keyframes confettiFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(15deg);
+    opacity: 0.9;
+  }
+}
+
+/* =========================
+   Responsive - Tablet
+========================= */
+
+@media (max-width: 1000px) {
+  .heroInner {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .giftDecoration {
+    width: 160px;
+    height: 160px;
+  }
+
+  .giftImage {
+    width: 130px;
+    height: 130px;
+  }
+
+  .leftGift {
+    left: -10px;
+  }
+
+  .rightGift {
+    right: -10px;
+  }
+
+  .content h1 {
+    font-size: clamp(46px, 7vw, 65px);
+  }
+}
+
+/* =========================
+   Responsive - Mobile
+========================= */
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 430px;
+  }
+
+  .heroInner {
+    min-height: 430px;
+    padding: 45px 20px 35px;
+  }
+
+  .label {
+    padding: 7px 13px;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+
+  .content h1 {
+    font-size: clamp(40px, 12vw, 58px);
+    letter-spacing: -1.8px;
+  }
+
+  .content p {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .desktopBreak {
+    display: none;
+  }
+
+  .subText {
+    font-size: 12px;
+    margin-top: 13px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 25px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .giftDecoration {
+    width: 110px;
+    height: 110px;
+    opacity: 0.7;
+  }
+
+  .giftImage {
+    width: 90px;
+    height: 90px;
+  }
+
+  .leftGift {
+    left: -15px;
+    top: 90px;
+  }
+
+  .rightGift {
+    right: -15px;
+    top: 90px;
+  }
+
+  .giftGlow {
+    width: 80px;
+    height: 80px;
+  }
+
+  .c1 {
+    left: 7%;
+  }
+
+  .c2 {
+    left: 22%;
+  }
+
+  .c3 {
+    left: 4%;
+  }
+
+  .c4 {
+    left: 12%;
+  }
+
+  .c5 {
+    left: 6%;
+  }
+
+  .c6 {
+    left: 24%;
+  }
+
+  .c7 {
+    right: 7%;
+  }
+
+  .c8 {
+    right: 22%;
+  }
+
+  .c9 {
+    right: 4%;
+  }
+
+  .c10 {
+    right: 12%;
+  }
+
+  .c11 {
+    right: 6%;
+  }
+
+  .c12 {
+    right: 24%;
+  }
+
+  .c13 {
+    left: 30%;
+  }
+
+  .c14 {
+    right: 30%;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 420px) {
+  .hero {
+    min-height: 400px;
+  }
+
+  .heroInner {
+    min-height: 400px;
+    padding: 40px 16px 30px;
+  }
+
+  .content h1 {
+    font-size: 38px;
+  }
+
+  .content p {
+    font-size: 13px;
+  }
+
+  .subText {
+    font-size: 11px;
+  }
+
+  .giftDecoration {
+    width: 85px;
+    height: 85px;
+  }
+
+  .giftImage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .leftGift {
+    left: -20px;
+    top: 100px;
+  }
+
+  .rightGift {
+    right: -20px;
+    top: 100px;
+  }
+
+  .confetti {
+    font-size: 14px;
+  }
+
+  .actions {
+    max-width: 280px;
+  }
+}

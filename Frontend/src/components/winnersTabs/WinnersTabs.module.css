@@ -1,0 +1,348 @@
+.section {
+  padding: 70px 20px;
+  background: transparent;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 35px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #a45cff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.header h2 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.header p {
+  max-width: 600px;
+  margin: 0;
+  color: #898493;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ================================
+   TABS
+================================ */
+
+.tabsWrapper {
+  margin-bottom: 28px;
+}
+
+.tabs {
+  display: inline-flex;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid rgba(145, 82, 255, 0.22);
+  border-radius: 12px;
+  background: rgba(16, 14, 29, 0.82);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #85808f;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.tab:hover {
+  color: #ffffff;
+  background: rgba(139, 72, 255, 0.08);
+}
+
+.activeTab {
+  background: linear-gradient(135deg, #8f3fff, #6924d8);
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(116, 39, 225, 0.25);
+}
+
+/* ================================
+   EMPTY CURRENT WINNERS
+================================ */
+
+.emptyState {
+  min-height: 310px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 45px 25px;
+  border: 1px solid rgba(145, 82, 255, 0.22);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(125, 57, 255, 0.1), transparent 45%),
+    linear-gradient(145deg, #121022, #0b0c17);
+  text-align: center;
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+.emptyIcon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 18px;
+  background: radial-gradient(
+    circle,
+    rgba(163, 81, 255, 0.25),
+    rgba(89, 32, 150, 0.08)
+  );
+  border: 1px solid rgba(165, 84, 255, 0.3);
+  color: #bd72ff;
+  box-shadow: 0 0 25px rgba(145, 62, 255, 0.14);
+}
+
+.emptyState h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 21px;
+}
+
+.emptyState p {
+  max-width: 500px;
+  margin: 0;
+  color: #898493;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.status {
+  margin-top: 18px;
+  padding: 7px 12px;
+  border: 1px solid rgba(145, 82, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(125, 55, 230, 0.08);
+  color: #b66dff;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+/* ================================
+   PREVIOUS WINNERS
+================================ */
+
+.winnerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.winnerCard {
+  position: relative;
+  overflow: hidden;
+  padding: 25px;
+  border: 1px solid rgba(145, 82, 255, 0.2);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(125, 57, 255, 0.1), transparent 38%),
+    linear-gradient(145deg, #121022 0%, #0c0d18 60%, #090a13 100%);
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.winnerCard::before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  left: -80px;
+  top: -100px;
+  border-radius: 50%;
+  background: rgba(134, 62, 255, 0.1);
+  filter: blur(35px);
+  pointer-events: none;
+}
+
+.winnerCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(161, 91, 255, 0.4);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(126, 55, 255, 0.08);
+}
+
+.cardTop {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(164, 83, 255, 0.25),
+    rgba(76, 29, 130, 0.1)
+  );
+  border: 1px solid rgba(164, 83, 255, 0.3);
+  color: #c084fc;
+  font-size: 13px;
+  font-weight: 750;
+  box-shadow: 0 0 18px rgba(143, 60, 255, 0.12);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.userInfo strong {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.userInfo span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #85808f;
+  font-size: 11px;
+}
+
+.trophySmall {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  border-radius: 10px;
+  background: rgba(169, 86, 255, 0.1);
+  border: 1px solid rgba(169, 86, 255, 0.2);
+  color: #b96cff;
+}
+
+.divider {
+  height: 1px;
+  margin: 22px 0;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.prizeInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.prizeInfo span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #777180;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.prizeInfo h3 {
+  margin: 8px 0 0;
+  color: #ffffff;
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 22px;
+  color: #85808f;
+  font-size: 10px;
+}
+
+.cardBottom time {
+  white-space: nowrap;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  .winnerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 480px) {
+  .tabs {
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .tab svg {
+    display: none;
+  }
+
+  .winnerCard {
+    padding: 20px;
+  }
+
+  .cardBottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

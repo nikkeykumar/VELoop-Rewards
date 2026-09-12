@@ -1,0 +1,167 @@
+.section {
+  width: 100%;
+  padding: 70px 24px;
+  background: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #9b6cff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.header h2 {
+  margin: 9px 0 8px;
+  color: #ffffff;
+  font-size: 38px;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.header p {
+  margin: 0;
+  color: #858391;
+  font-size: 13px;
+}
+
+/* ARROWS */
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.arrowButton {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.035);
+  color: #aaa7b5;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.arrowButton:hover {
+  color: #ffffff;
+  border-color: rgba(145, 80, 255, 0.4);
+  background: rgba(126, 67, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+/* SLIDER */
+
+.slider {
+  display: flex;
+  gap: 18px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  padding: 5px 3px 20px;
+
+  scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* EACH CARD */
+
+.slide {
+  flex: 0 0 calc((100% - 54px) / 4);
+
+  scroll-snap-align: start;
+}
+
+/* MOBILE */
+
+@media (max-width: 1100px) {
+  .slide {
+    flex: 0 0 calc((100% - 18px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 55px 16px;
+  }
+
+  .header {
+    align-items: flex-start;
+  }
+
+  .header h2 {
+    font-size: 32px;
+  }
+
+  .slide {
+    flex: 0 0 310px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 45px 12px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 20px;
+  }
+
+  .header h2 {
+    font-size: 29px;
+  }
+
+  .header p {
+    font-size: 12px;
+  }
+
+  .actions {
+    align-self: flex-end;
+  }
+
+  .arrowButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .slider {
+    gap: 12px;
+    padding-bottom: 14px;
+  }
+
+  .slide {
+    flex: 0 0 285px;
+  }
+}

@@ -1,0 +1,375 @@
+.section {
+  width: 100%;
+  padding: 70px 20px;
+  background: transparent;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 38px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #a86cff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.header h2 {
+  margin: 0 0 9px;
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.header p {
+  max-width: 580px;
+  margin: 0;
+  color: #858291;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.demoBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  border: 1px solid rgba(158, 91, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(116, 54, 205, 0.08);
+  color: #b77cff;
+  font-size: 11px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+  padding: 0 55px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: min(760px, 100%);
+  min-height: 285px;
+  padding: 38px 42px;
+  border: 1px solid rgba(145, 91, 255, 0.24);
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(125, 62, 255, 0.13),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #121022 0%, #0c0d18 60%, #090a13 100%);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(166, 104, 255, 0.42);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.48),
+    0 0 28px rgba(125, 55, 255, 0.08);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  left: -80px;
+  top: -100px;
+  border-radius: 50%;
+  background: rgba(126, 67, 255, 0.12);
+  filter: blur(45px);
+  pointer-events: none;
+}
+
+.trophy {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background: radial-gradient(
+    circle,
+    rgba(169, 87, 255, 0.28),
+    rgba(81, 35, 145, 0.1)
+  );
+  border: 1px solid rgba(170, 91, 255, 0.38);
+  color: #c084fc;
+  box-shadow:
+    0 0 28px rgba(152, 67, 255, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.winnerLabel {
+  margin-bottom: 7px;
+  color: #a96aff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.content h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: #8e8998;
+  font-size: 12px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 18px 0;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.wonLabel {
+  margin-bottom: 5px;
+  color: #777280;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.prize {
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.date {
+  margin-top: 7px;
+  color: #85808e;
+  font-size: 11px;
+}
+
+.verified {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #7d7887;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 4;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 50%;
+  background: rgba(18, 17, 30, 0.9);
+  color: #aaa4b3;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.06);
+  color: #ffffff;
+  border-color: rgba(157, 88, 255, 0.45);
+  background: rgba(102, 45, 190, 0.16);
+}
+
+.left {
+  left: 5px;
+}
+.right {
+  right: 5px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 22px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #393444;
+  cursor: pointer;
+  transition:
+    width 0.2s ease,
+    background 0.2s ease;
+}
+
+.activeDot {
+  width: 22px;
+  border-radius: 999px;
+  background: #a45cff;
+  box-shadow: 0 0 10px rgba(164, 92, 255, 0.25);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .slider {
+    min-height: 390px;
+    padding: 0 42px;
+  }
+
+  .card {
+    width: 100%;
+    min-height: 280px;
+    padding: 32px 25px;
+    gap: 22px;
+  }
+
+  .trophy {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+  }
+
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .section {
+    padding: 50px 14px;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .header h2 {
+    font-size: 29px;
+  }
+
+  .header p {
+    font-size: 12px;
+  }
+
+  .slider {
+    min-height: 430px;
+    padding: 0 28px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-height: auto;
+    padding: 45px 20px 25px;
+    gap: 18px;
+    border-radius: 18px;
+  }
+
+  .trophy {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+  }
+
+  .content h3 {
+    font-size: 21px;
+  }
+  .prize {
+    font-size: 18px;
+  }
+
+  .verified {
+    top: 16px;
+    right: 16px;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .left {
+    left: -2px;
+  }
+  .right {
+    right: -2px;
+  }
+}
